@@ -6,7 +6,13 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "eslint": "eslint --ext .ts,.tsx,.svelte, src",
+    "prettier": "prettier --plugin-search-dir . --check .",
+    "stylelint": "stylelint \"**/*.{svelte,css}\"",
+    "lint": "pnpm run eslint && pnpm run prettier",
+    "lint:fix": "pnpm run eslint --fix && pnpm run stylelint --fix",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",

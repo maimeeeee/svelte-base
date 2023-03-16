@@ -1,12 +1,12 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
-  plugins: ['@typescript-eslint', 'import', 'unused-imports'],
+  plugins: ['svelte3', '@typescript-eslint', 'import', 'unused-imports'],
   settings: { 'svelte3/typescript': () => require('typescript') },
   rules: {
     'max-len': ['error', { code: 100 }],
-    'max-lines': ['error', { code: 200 }],
-    indent: ['error', 'tab'],
+    'max-lines': ['error', 200],
+    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],

@@ -1,8 +1,8 @@
 <script lang="ts">
   import { confetti } from '@neoconfetti/svelte'
-  import { enhance } from '$app/forms'
-  import type { PageData, ActionData } from './$types'
   import { reduced_motion } from './reduced-motion'
+  import type { PageData, ActionData } from './$types'
+  import { enhance } from '$app/forms'
 
   export let data: PageData
 
@@ -138,7 +138,7 @@
         <p>the answer was "{data.answer}"</p>
       {/if}
       <button data-key="enter" class="restart selected" formaction="?/restart">
-        {won ? 'you won :)' : `game over :(`} play again?
+        {won ? 'you won :)' : 'game over :('} play again?
       </button>
     {:else}
       <div class="keyboard">
