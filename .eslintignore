@@ -3,6 +3,5 @@ node_modules
 static
 build
 .svelte-kit
-.env
 
 pnpm-lock.yaml
